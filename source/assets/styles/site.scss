@@ -1,0 +1,189 @@
+/*!
+ *
+ */
+
+
+
+/*
+ *
+ */
+header.container {
+    transform: rotate(-1deg);
+
+    img {
+        max-width: 100px;
+        margin-bottom: 1.0em;
+    }
+
+    h1, h2, h3 {
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-weight: normal;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        padding-bottom: 0.5em;
+        font-size: 2.0em;
+    }
+
+    h3 {
+        margin-bottom: 0;
+        padding-bottom: 0.2em;
+        font-size: 1.2em;
+    }
+
+    p {
+        --color: var(--color);
+    }
+
+    nav,
+    nav ul,
+    nav ul li,
+    nav ul li details,
+    nav ul li summary,
+    nav ul li details ul,
+    nav ul li details ul li {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+/*
+ *
+ */
+article {
+    width: 100%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+        width: 100%;
+/*        object-fit: cover; */
+    }
+}
+
+@media (min-width: 576px) {
+    body > article {
+        max-width: 510px;
+    }
+}
+@media (min-width: 768px) {
+    body > article {
+        max-width: 700px;
+    }
+}
+@media (min-width: 992px) {
+    body > article {
+        max-width: 920px;
+    }
+}
+@media (min-width: 1200px) {
+    body > article {
+        max-width: 1130px;
+    }
+}
+
+
+/*
+ *
+ */
+main.container {
+
+    h2 {
+        font-size: 2.4em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+        text-decoration: underline;
+    }
+
+    img {
+        margin-bottom: 1.0em;
+        padding-bottom: 0;
+    }
+
+    dl, dl dt {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    dl dt {
+        text-decoration: underline;
+    }
+
+    dl dd {
+        margin-left: 0;
+        padding-left: 1.0em;
+    }
+
+    blockquote, blockquote p {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        padding-bottom: 0.2em;
+        padding-top: 0.2em;
+    }
+
+    blockquote {
+        margin-bottom: 1.0em;
+    }
+
+    blockquote p {
+        font-style: italic;
+    }
+}
+
+
+/*
+ *
+ */
+footer.container {
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 0.5em;
+        padding-bottom: 0;
+    }
+
+    p {
+        margin-bottom: 0.5em;
+        padding-bottom: 0;
+    }
+}
+
+
+/*
+ *
+ */
+
+header.container ul#social-networks,
+footer.container ul#thanks {
+    display: flex;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        list-style-type: none;
+        list-style-position: inside;
+        margin: 0;
+        padding: 0;
+    }
+
+    li:not(:last-of-type) {
+        padding-right: 0.5em
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "language": "ja",
+    "name": "project2501",
+    "description": "Like the portfolio web site of Masahiquo, 'Nara-ya/奈良屋' MORRY, a.k.a @dollplayer2501.",
+    "author": {
+        "name": "Masahiquo, 'Nara-ya/奈良屋' MORRY",
+        "url": "https://twitter.com/dollplayer2501",
+        "avator": "eD3o3g7O_400x400.png",
+        "description": [
+            "Freelance programmer, in Kako District, Hyōgo, Japan.",
+            "I'm an IT土方・電算職（自称）, NOT ENGINEER, and not sure if I'm a programmer or not?",
+            "BTW, in the summer of 2022, I had an artificial femoral head, <small>人工骨頭</small>, made by Stryker, inserted into my left thigh, <small>左大腿部</small>.",
+            "Avator: <small><a href=\"https://picrew.me/ja/image_maker/80783\">拝式目付きの悪い男メーカー｜Picrew</a></small>"
+        ]
+    },
+    "interested_currently_mmmyyyy": "November 2023",
+    "more":{
+        "url": "https://dollplayer2501.netlify.app",
+        "name": "unlimited text works, the 4th.",
+        "description": "個人的な駄文置き場、随時更新中？"
+    },
+    "github": "https://github.com/dollplayer2501/project2501-v2",
+    "googleAnalytics4": "G-6MR1RM9MVK"
+}

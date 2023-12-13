@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Eleventy",
+        "url": "https://www.11ty.dev/"
+    }, {
+        "name": "Gulp.js",
+        "url": "https://gulpjs.com/"
+    }, {
+        "name": "npm",
+        "url": "https://www.npmjs.com/"
+    }, {
+        "name": "Netlify",
+        "url": "https://www.netlify.com/"
+    }, {
+        "name": "GitHub",
+        "url": "https://github.com/"
+    }, {
+        "name": "Pico.css",
+        "url": "https://picocss.com/"
+    }, {
+        "name": "Bootstrap",
+        "url": "https://getbootstrap.com/"
+    }, {
+        "name": "Font Awesome",
+        "url": "https://fontawesome.com/"
+    }
+]

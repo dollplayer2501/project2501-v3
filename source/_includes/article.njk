@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ site.name | escape }} - {{ site.author.name | escape }} - {{ site.description1 | escape }}</title>
+    <meta
+      name="description"
+      content="{{ site.name | escape }} - {{ site.author.name | escape }}"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles/fontawesome-free.css"
+    />
+    <!-- Pico.css (Classless version) -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles/pico.classless.CUSTOM.css"
+    />
+    <!-- my css -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles/site.css"
+    />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="container">
+      <hgroup>
+        <h1>{{ site.name | escape }}</h1>
+        <h2>{{ site.author.name | escape }}</h2>
+        <div class="container">
+          <div class="row row-example">
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2">
+              <div class="col-example">
+                <img src="/images/{% set_image_extension site.author.avator %}" />
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+              <div class="col-example">
+                {{ collections.contentsSectionRecent[0].templateContent | safe }}
+              </div>
+              <ul id="social-networks">
+{% for item in socials %}
+                <li>
+  {% set_picocss_tooltips item.url, item.name | escape, 'bottom' %}
+                    <i class="fab {{ item.fontawesome }} fa-3x"></i>
+  {% endset_picocss_tooltips %}
+                </li>
+{% endfor %}
+              </ul>
+              <p>
+                <a href="{{ site.more.url }}">
+                  <mark>{{ site.more.name | escape }}</mark> / <small>{{ site.more.description | escape }}</small>
+                </a>
+              </p>
+              <nav>
+                <ul>
+                  <li>
+                    <details role="list">
+                      <summary aria-haspopup="listbox" role="button">Theme</summary>
+                      <ul role="listbox">
+                        <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                        <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+                        <li><a href="#" data-theme-switcher="light">Light</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </hgroup>
+    </header>
+    <!-- ./ Header -->
+
+
+    <article class="container">
+      <img src="/images/{% set_image_extension "IMG_4604_twitter_gray.jpg" %}" />
+    </article>
+
+
+    <!-- Main -->
+    <main class="container">
+      <h2>Currently, I am interested in:</h2>
+
+      <p><strong>As of {{ site.interested_currently_mmmyyyy | escape }}</strong></p>
+
+{% set items = collections.contentsSectionWorks %}
+{% for item in items %}
+  {% if 'abstract' == item.data.tags %}
+      <h3>{{ item.data.subtitle | safe }}</h3>
+{{ item.templateContent | safe }}
+  {% elif 'content' == item.data.tags %}
+      <h4>{{ item.data.subtitle | safe }}</h4>
+        <div class="container">
+          <div class="row row-example">
+            <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.left }} col-xl-{{ item.data.col.left }}">
+              <div class="col-example">
+{% for image in item.data.images %}
+                <img src="/images/{% set_image_extension image %}" />
+{% endfor %}
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.right }} col-xl-{{ item.data.col.right }}">
+              <div class="col-example">
+                {{ item.templateContent | safe }}
+                <hr />
+                <p><strong><a href="{{ item.data.github }}">GitHub repository</a></strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+  {% endif %}
+{% endfor %}
+
+    </main>
+    <!-- ./ Main -->
+
+
+    <article class="container">
+      <img src="/images/{% set_image_extension "IMG_4604_twitter_colored.png" %}" />
+    </article>
+
+
+    <!-- Footer -->
+    <footer class="container">
+      <h2>Thanks...</h2>
+      <p>And this site is constructed using the following technology.</p>
+      <ul id="thanks">
+{% for item in thanks %}
+        <li>
+          <a href="{{ item.url }}">{{ item.name | escape }}</a>
+        </li>
+{% endfor %}
+      </ul>
+
+<!--      GitHub, <a href="{{ site.github }}/commit/{{ buildInfo.hash }}">last built on {{ buildInfo.time.formatted }} {{ buildInfo.hash }}</a> -->
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="/assets/scripts/minimal-theme-switcher.js"></script>
+  </body>
+</html>
