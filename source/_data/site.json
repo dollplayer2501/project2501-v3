@@ -19,6 +19,9 @@
         "name": "unlimited text works, the 4th.",
         "description": "個人的な駄文置き場、随時更新中？"
     },
-    "github": "https://github.com/dollplayer2501/project2501-v2",
+    "github": {
+        "name": "project2501-v3",
+        "url": "https://github.com/dollplayer2501/project2501-v3"
+    },
     "googleAnalytics4": "G-6MR1RM9MVK"
 }

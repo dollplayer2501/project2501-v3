@@ -43,6 +43,26 @@ header.container {
         --color: var(--color);
     }
 
+    ul#social-networks {
+        display: flex;
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+
+        li {
+            list-style-type: none;
+            list-style-position: inside;
+            margin: 0;
+            padding: 0;
+        }
+
+        li:not(:last-of-type) {
+            padding-right: 0.5em
+        }
+    }
+
+    /* pend 2023-12-14 */
+/*
     nav,
     nav ul,
     nav ul li,
@@ -55,6 +75,7 @@ header.container {
         padding-top: 0;
         padding-bottom: 0;
     }
+*/
 }
 
 
@@ -159,31 +180,29 @@ footer.container {
     }
 
     p {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.2em;
         padding-bottom: 0;
     }
-}
 
+    ul#thanks {
+        display: flex;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 0.4em;
+        padding-bottom: 0;
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
 
-/*
- *
- */
+        li {
+            list-style-type: none;
+            list-style-position: inside;
+            margin: 0;
+            padding: 0;
+        }
 
-header.container ul#social-networks,
-footer.container ul#thanks {
-    display: flex;
-    margin-left: 0;
-    padding-left: 0;
-    list-style: none;
-
-    li {
-        list-style-type: none;
-        list-style-position: inside;
-        margin: 0;
-        padding: 0;
-    }
-
-    li:not(:last-of-type) {
-        padding-right: 0.5em
+        li:not(:last-of-type) {
+            padding-right: 0.5em
+        }
     }
 }

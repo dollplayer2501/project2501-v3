@@ -4,6 +4,8 @@ Thumbs.db
 
 node_modules
 package-lock.json
+.vscode
 
 _develop
 _product
+source/images/raw
