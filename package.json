@@ -18,6 +18,7 @@
     "develop:watch": "npm-run-all --sequential develop:clean develop:gulp:build --parallel develop:gulp:watch develop:eleventy:watch",
     "image:build-thumb": "sh ./source/images/create_thumb.sh",
     "image:build-tiles": "sh ./source/images/create_tiles.sh",
+    "image:build-etc": "sh ./source/images/create_etc.sh",
     "product:clean": "rimraf ./_product",
     "product:gulp:build": "cross-env NODE_ENV=product npx gulp build",
     "product:eleventy:build": "cross-env NODE_ENV=product npx @11ty/eleventy",
