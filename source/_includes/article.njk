@@ -120,8 +120,12 @@
             <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.right }} col-xl-{{ item.data.col.right }}">
               <div class="col-example">
                 {{ item.templateContent | safe }}
-                <hr />
-                <p><strong><a href="{{ item.data.github }}">GitHub repository</a></strong></p>
+                <dl>
+                  <dt>Current status</dt>
+                  <dd>{{ item.data.status }}</dd>
+                  <dt>GitHub repository</dt>
+                  <dd><a href="{{ item.data.github }}">{{ item.data.github }}</a></dd>
+                </dl>
               </div>
             </div>
           </div>
