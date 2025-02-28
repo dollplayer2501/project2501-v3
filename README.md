@@ -1,3 +1,14 @@
+> [!CAUTION]
+> The following packages are currently out of date.  
+>  
+>  @11ty/eleventy   ^2.0.1  →  ^3.0.0  
+>  @picocss/pico   ^1.5.13  →  ^2.0.6  
+>  gulp             ^4.0.2  →  ^5.0.0  
+>  
+> The currently known bug is that when Gulp is updated to the latest version, Gulp-webp is unable to properly convert to webp or copy png.  
+> Also, when compiling Sass/SCSS, a lot of warnings will appear.
+
+
 <img src="./source/images/screenshot..project2501-v3-dark..thumb.png" width="300">&nbsp;&nbsp;<img src="./source/images/screenshot..project2501-v3-light..thumb.png" width="300">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/abe8230e-48f9-4ce9-8513-4e0541f64d21/deploy-status)](https://app.netlify.com/sites/project2501/deploys)
