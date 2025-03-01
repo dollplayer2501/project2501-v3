@@ -56,9 +56,12 @@
               <ul id="social-networks">
 {% for item in socials %}
                 <li>
+                  <a href="{{ item.url }}" data-tooltip="{{ item.name | escape }}" data-placement="right"><i class="fab {{ item.fontawesome }} fa-3x"></i></a>
+<!--
   {% set_picocss_tooltips item.url, item.name | escape, 'bottom' %}
                     <i class="fab {{ item.fontawesome }} fa-3x"></i>
   {% endset_picocss_tooltips %}
+-->
                 </li>
 {% endfor %}
               </ul>
@@ -120,12 +123,10 @@
             <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.right }} col-xl-{{ item.data.col.right }}">
               <div class="col-example">
                 {{ item.templateContent | safe }}
-                <dl>
-                  <dt>Current status</dt>
-                  <dd>{{ item.data.status }}</dd>
-                  <dt>GitHub repository</dt>
-                  <dd><a href="{{ item.data.github }}">{{ item.data.github }}</a></dd>
-                </dl>
+                <h5>Current status</h5>
+                <p>{{ item.data.status }}</p>
+                <h5>GitHub repository</h5>
+                <p><a href="{{ item.data.github }}">{{ item.data.github }}</a></p>
               </div>
             </div>
           </div>
@@ -154,7 +155,7 @@
 {% endfor %}
       </ul>
       <p>
-        <a href="{{ site.github.url }}">{{ site.github.name | escape }}</a> is the repository for this site.<br />
+        <a href="{{ site.github.url }}">{{ site.github.name | escape }}@GitHub</a> is the repository for this site.<br />
         Last built on <a href="{{ site.github.url }}/commit/{{ buildInfo.hash }}">{{ buildInfo.time.formatted }} {{ buildInfo.hash }}</a>.
       </p>
     </footer>

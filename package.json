@@ -32,7 +32,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
-    "@picocss/pico": "^1.5.13",
+    "@picocss/pico": "^2.0.6",
     "bootstrap": "^5.3.3",
     "cross-env": "^7.0.3",
     "gulp": "^4.0.2",

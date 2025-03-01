@@ -9,8 +9,10 @@
 // @import 'bootstrap/scss/bootstrap-grid.scss';
 
 
-
-
+/*
+ * examples/v1-bootstrap-grid at master · picocss/examples
+ * https://github.com/picocss/examples/tree/master/v1-bootstrap-grid
+ */
 
 $include-column-box-sizing: true;
 $grid-breakpoints: (
@@ -37,15 +39,47 @@ $grid-breakpoints: (
 @import 'bootstrap/scss/_grid.scss';
 
 
-
-
-
+/*
+ *
+ */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Raleway:wght@400;600;800&display=swap');
 
 :root {
-    --font-family: 'Raleway', 'Noto Sans JP', sans-serif;
-    --border-radius: 0;
-    --form-element-spacing-vertical: 1rem;
-    --form-element-spacing-horizontal: 1.25rem;
+  --pico-font-family-sans-serif: 'Raleway', 'Noto Sans JP', sans-serif, var(--pico-font-family-emoji);
 }
+
+@media (min-width: 576px) {
+  :root {
+    --pico-font-size: 90.00%;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --pico-font-size: 95.00%;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --pico-font-size: 100.00%;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --pico-font-size: 105.00%;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --pico-font-size: 110.00%;
+  }
+}
+
+/*
+ * :root {
+ *    --font-family: 'Raleway', 'Noto Sans JP', sans-serif;
+ *    --border-radius: 0;
+ *    --form-element-spacing-vertical: 1rem;
+ *    --form-element-spacing-horizontal: 1.25rem;
+ * }
+ */
