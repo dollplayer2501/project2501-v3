@@ -2,7 +2,6 @@
 > The following packages are currently out of date.  
 >  
 >  @11ty/eleventy   ^2.0.1  →  ^3.0.0  
->  @picocss/pico   ^1.5.13  →  ^2.0.6  
 >  gulp             ^4.0.2  →  ^5.0.0  
 >  
 > The currently known bug is that when Gulp is updated to the latest version, Gulp-webp is unable to properly convert to webp or copy png.  
