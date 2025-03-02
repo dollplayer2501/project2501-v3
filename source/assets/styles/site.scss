@@ -8,6 +8,8 @@
  *
  */
 header.container {
+    margin-top: 3.0em;
+
     transform: rotate(-1deg);
 
     img {
@@ -54,6 +56,10 @@ header.container {
             list-style-position: inside;
             margin: 0;
             padding: 0;
+
+            i.fab {
+                font-size: 2.0em;
+            }
         }
 
         li:not(:last-of-type) {
@@ -133,6 +139,16 @@ main.container {
         text-decoration: underline;
     }
 
+    h4 {
+        margin-bottom: 2.0em;
+    }
+
+    h5 {
+        font-size: 1.0;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
     img {
         margin-bottom: 1.0em;
         padding-bottom: 0;
@@ -166,6 +182,10 @@ main.container {
     blockquote p {
         font-style: italic;
     }
+
+    p.strong {
+        font-weight: bold;
+    }
 }
 
 
@@ -173,6 +193,8 @@ main.container {
  *
  */
 footer.container {
+    margin-bottom: 3.0em;
+
     h2 {
         font-size: 1.8em;
         margin-bottom: 0.5em;
@@ -185,18 +207,19 @@ footer.container {
     }
 
     ul#thanks {
-        display: flex;
+        // display: flex;
         margin-top: 0;
         padding-top: 0;
-        margin-bottom: 0.4em;
+        margin-bottom: 0;
         padding-bottom: 0;
-        margin-left: 0;
+        margin-left: 1.0em;
         padding-left: 0;
         list-style: none;
 
         li {
-            list-style-type: none;
-            list-style-position: inside;
+            // list-style-type: none;
+            // list-style-position: inside;
+            display: inline-block;
             margin: 0;
             padding: 0;
         }
@@ -204,5 +227,16 @@ footer.container {
         li:not(:last-of-type) {
             padding-right: 0.5em
         }
+    }
+}
+
+
+/*
+ *
+ */
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
     }
 }
