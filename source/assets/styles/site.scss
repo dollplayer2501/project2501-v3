@@ -3,6 +3,40 @@
  */
 
 
+/*
+ * Google Fonts
+ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Raleway:wght@400;600;800&display=swap');
+:root {
+    --pico-font-family-sans-serif: 'Raleway', 'Noto Sans JP', sans-serif;
+}
+ 
+@media (min-width: 576px) {
+    :root {
+        --pico-font-size: 90.00%;
+    }
+}
+@media (min-width: 768px) {
+    :root {
+        --pico-font-size: 92.50%;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --pico-font-size: 95.00%;
+    }
+}
+@media (min-width: 1280px) {
+    :root {
+        --pico-font-size: 97.50%;
+    }
+}
+@media (min-width: 1536px) {
+    :root {
+        --pico-font-size: 100.00%;
+    }
+}
+
 
 /*
  *
@@ -99,10 +133,10 @@ article {
 
     img {
         width: 100%;
-/*        object-fit: cover; */
     }
 }
 
+/*
 @media (min-width: 576px) {
     body > article {
         max-width: 510px;
@@ -123,28 +157,34 @@ article {
         max-width: 1130px;
     }
 }
+*/
 
 
 /*
  *
  */
 main.container {
+    margin-bottom: 1.0em;
 
     h2 {
-        font-size: 2.4em;
+        font-size: 2.0em;
+        font-weight: normal;
     }
 
     h3 {
-        font-size: 1.6em;
+        font-size: 2.0em;
+        font-weight: normal;
         text-decoration: underline;
     }
 
     h4 {
         margin-bottom: 2.0em;
+        font-weight: normal;
+        color: var(--pico-primary);
     }
 
     h5 {
-        font-size: 1.0;
+        font-size: 1.0em;
         font-weight: normal;
         text-decoration: underline;
     }
