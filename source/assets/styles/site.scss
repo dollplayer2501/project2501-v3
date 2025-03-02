@@ -182,6 +182,10 @@ main.container {
     blockquote p {
         font-style: italic;
     }
+
+    p.strong {
+        font-weight: bold;
+    }
 }
 
 
