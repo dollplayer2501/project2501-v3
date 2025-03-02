@@ -14,8 +14,6 @@ export const outputPath = mode.product() ? './_product' : './_develop';
 export const path = {
     'scss': {
         'source': [
-            './source/assets/styles/pico.classless.CUSTOM.scss',
-            './source/assets/styles/fontawesome-free.scss',
             './source/assets/styles/site.scss',
         ],
         'watch': './source/assets/styles/**/*.{scss,sass}',

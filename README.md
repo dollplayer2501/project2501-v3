@@ -31,8 +31,8 @@ The URLs below point to the same site.
         - Use [markdown-it](https://www.npmjs.com/package/markdown-it) and [markdown-it-deflist](https://www.npmjs.com/package/@gerhobbelt/markdown-it-deflist) instead of [build in Markdown](https://www.11ty.dev/docs/languages/markdown/)
     - Gulp
         - [gulp-dart-sass](https://www.npmjs.com/package/gulp-dart-sass) with [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
-            - [Class-less version](https://picocss.com/docs/classless.html) of [Pico.css v1.5.x](https://picocss.com/)
-            - [Pico + Bootstrap grid system](https://picocss.com/examples/bootstrap-grid/)
+            - [Pico CSS](https://picocss.com/) v2.0
+            - [Bootstrap](https://getbootstrap.com/) v5.3, CSS Grid
             - [Fontawesome-free](https://www.npmjs.com/package/@fortawesome/fontawesome-free)
         - [gulp-terser](https://www.npmjs.com/package/gulp-terser) with [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
         - [gulp-webp](https://www.npmjs.com/package/gulp-webp) with [lastrun](https://gulpjs.com/docs/en/api/lastrun/)

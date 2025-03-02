@@ -4,7 +4,7 @@ TODO: 各記事単位でdisplay=true/falseみたいにする？（この場合�
 TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2025年3月初旬）移行、記事の大幅見直しをする予定だけど、今まで書いた記事は消したくないので
  -->
 <!DOCTYPE html>
-<html lang="{{ site.language }}">
+<html lang="{{ site.language }}" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,13 +18,25 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
     <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="/assets/styles/fontawesome-free.css"
+      href="/assets/styles/fontawesome.min.css"
     />
-    <!-- Pico.css (Classless version) -->
     <link
       rel="stylesheet"
-      href="/assets/styles/pico.classless.CUSTOM.css"
+      href="/assets/styles/brands.min.css"
     />
+
+    <!-- bootstrap-grid -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles/bootstrap-grid.min.css"
+    />
+
+    <!-- Pico.css -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles/pico.min.css"
+    />
+
     <!-- my css -->
     <link
       rel="stylesheet"
