@@ -1,7 +1,6 @@
 > [!CAUTION]
 > The following packages are currently out of date.  
 >  
->  @11ty/eleventy   ^2.0.1  →  ^3.0.0  
 >  gulp             ^4.0.2  →  ^5.0.0  
 >  
 > The currently known bug is that when Gulp is updated to the latest version, Gulp-webp is unable to properly convert to webp or copy png.  
@@ -57,6 +56,11 @@ The URLs below point to the same site.
     cd any-path-name
 
 ### 2. Check the Node.js version if necessary
+
+> [!NOTE]
+> Currently...as of March 2025, I am using mise-en-place instead of rtx.  
+> It seems that hoge processes the file normally even with the file name `.tool-versions`.
+> For this reason, I have not changed the file name.
 
     rtx activate fish | source
 
