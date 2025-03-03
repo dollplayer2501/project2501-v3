@@ -21,139 +21,140 @@ const isProduction = process.env.NODE_ENV === 'product' ? true: false;
 //
 module.exports = function (eleventyConfig) {
 
-    //
-    eleventyConfig.setQuietMode(false);
+  //
+  eleventyConfig.setQuietMode(false);
 
-    //
-    // eleventy-plugin-directory-output
-    //
-    eleventyConfig.addPlugin(directoryOutputPlugin, {
-        columns: {
-            filesize: true,
-            benchmark: true,
-        },
-        warningFileSize: 400 * 1000,
-    });
+  //
+  // eleventy-plugin-directory-output
+  //
+  eleventyConfig.addPlugin(directoryOutputPlugin, {
+    columns: {
+      filesize: true,
+      benchmark: true,
+    },
+    warningFileSize: 400 * 1000,
+  });
 
-    //
-    // 11ty - Collections
-    //
-    eleventyConfig.addCollection('contentsSectionWorks', collections.contentsSectionWorks);
-    eleventyConfig.addCollection('contentsSectionRecent', collections.contentsSectionRecent);
+  //
+  // 11ty - Collections
+  //
+  eleventyConfig.addCollection('contentsSectionWorks', collections.contentsSectionWorks);
+  eleventyConfig.addCollection('contentsSectionRecent', collections.contentsSectionRecent);
 
-    //
-    // 11ty - Shortcodes
-    //
-    eleventyConfig.addShortcode('set_image_extension', shortcodes.set_image_extension);
-    //
-    eleventyConfig.addPairedShortcode('set_picocss_tooltips', shortcodes.set_picocss_tooltips);
+  //
+  // 11ty - Shortcodes
+  //
+  eleventyConfig.addShortcode('set_image_extension', shortcodes.set_image_extension);
+  //
+  eleventyConfig.addPairedShortcode('set_picocss_tooltips', shortcodes.set_picocss_tooltips);
 
-    //
-    // 11ty - Passthrough Copy
-    //
-    eleventyConfig.addPassthroughCopy({ './source/static/**/*': './' });
-    eleventyConfig.addPassthroughCopy({
-        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf': './assets/webfonts/fa-brands-400.ttf',
-        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2': './assets/webfonts/fa-brands-400.woff2',
-        'node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css': './assets/styles/fontawesome.min.css',
-        'node_modules/@fortawesome/fontawesome-free/css/brands.min.css': './assets/styles/brands.min.css',
-    });
-    eleventyConfig.addPassthroughCopy({
-        'node_modules/@picocss/pico/css/pico.min.css': './assets/styles/pico.min.css',
-    });
-    eleventyConfig.addPassthroughCopy({
-        'node_modules/bootstrap/dist/css/bootstrap-grid.min.css': './assets/styles/bootstrap-grid.min.css',
-    });
-
-
-    //
-    // 11ty - Included Nunjucks
-    //
-    eleventyConfig.setNunjucksEnvironmentOptions({
-        throwOnUndefined: true,
-        autoescape: false,
-    });
-
-    //
-    // Markdown
-    //
-    let markdownIt_options = {
-        html: true,
-        breaks: true,
-        linkify: true,
-    };
-    //
-    let markdownLib = markdownIt(markdownIt_options).use(markdownItDeflist);
-    //
-    eleventyConfig.setLibrary('md', markdownLib);
+  //
+  // 11ty - Passthrough Copy
+  //
+  eleventyConfig.addPassthroughCopy({ './source/static/**/*': './' });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf': './assets/webfonts/fa-brands-400.ttf',
+    'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2': './assets/webfonts/fa-brands-400.woff2',
+    'node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css': './assets/styles/fontawesome.min.css',
+    'node_modules/@fortawesome/fontawesome-free/css/brands.min.css': './assets/styles/brands.min.css',
+  });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@picocss/pico/css/pico.min.css': './assets/styles/pico.min.css',
+  });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/bootstrap/dist/css/bootstrap-grid.min.css': './assets/styles/bootstrap-grid.min.css',
+  });
 
 
-    //
-    // 11ty - Watch
-    //
-    eleventyConfig.addWatchTarget('./source/assets/styles/');
-    eleventyConfig.addWatchTarget('./source/assets/scripts/');
-    eleventyConfig.setWatchThrottleWaitTime(3000);
+  //
+  // 11ty - Included Nunjucks
+  //
+  eleventyConfig.setNunjucksEnvironmentOptions({
+    throwOnUndefined: true,
+    autoescape: false,
+  });
 
+  //
+  // Markdown
+  //
+  let markdownIt_options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
+  //
+  let markdownLib = markdownIt(markdownIt_options).use(markdownItDeflist);
+  //
+  eleventyConfig.setLibrary('md', markdownLib);
+
+
+  //
+  // 11ty - Watch
+  //
+  eleventyConfig.addWatchTarget('./source/assets/styles/');
+  eleventyConfig.addWatchTarget('./source/assets/scripts/');
+  eleventyConfig.setWatchThrottleWaitTime(3000);
+
+  //
+  if (isProduction) {
     //
-    if (isProduction) {
-        //
-        // HTML minify
-        //
-        eleventyConfig.addTransform("htmlmin", function(content) {
-            if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
-                let minified = htmlmin.minify(content, {
-                    useShortDoctype: true,
-                    removeComments: true,
-                    collapseWhitespace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                });
-                return minified;
-            }
-            return content;
+    // HTML minify
+    //
+    eleventyConfig.addTransform("htmlmin", function(content) {
+      if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
         });
-    } else {
-        //
-        // 11ty - eleventy-dev-server, included in 11ty's install
-        //
-        eleventyConfig.setServerOptions({
-            liveReload: true,
-            domDiff: true,
-            port: 8080,
-            watch: [],
-            showAllHosts: false,
-            https: {},
-            encoding: 'utf-8',
-            showVersion: false,
-          });
+        return minified;
+      }
+      return content;
+    });
+  } else {
+    //
+    // 11ty - eleventy-dev-server, included in 11ty's install
+    //
+    eleventyConfig.setServerOptions({
+      liveReload: true,
+      domDiff: true,
+      port: 8080,
+      watch: [],
+      showAllHosts: false,
+      https: {},
+      encoding: 'utf-8',
+      showVersion: false,
+    });
+  }
+
+
+  //
+  if (! isProduction) {
+    eleventyConfig.on('eleventy.beforeWatch', async function () {
+      console.log('----  eleventy.beforeWatch  ----');
+    });
+
+    eleventyConfig.on('eleventy.before', async function () {
+      console.log('----  eleventy.before       ----');
+    });
+
+    eleventyConfig.on('eleventy.after', async function () {
+      console.log('----  eleventy.after        ----');
+    });
+  }
+
+
+  //
+  return {
+    markdownTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    dir: {
+      input: './source',
+      layouts: './_includes',
+      output: isProduction ? './_product' : './_develop'
     }
-
-
-    //
-    if (! isProduction) {
-        eleventyConfig.on('eleventy.beforeWatch', async function () {
-            console.log('----  eleventy.beforeWatch  ----');
-        });
-
-        eleventyConfig.on('eleventy.before', async function () {
-            console.log('----  eleventy.before       ----');
-        });
-
-        eleventyConfig.on('eleventy.after', async function () {
-            console.log('----  eleventy.after        ----');
-        });
-    }
-
-    //
-    return {
-        markdownTemplateEngine: 'njk',
-        dataTemplateEngine: 'njk',
-        htmlTemplateEngine: 'njk',
-        dir: {
-            input: './source',
-            layouts: './_includes',
-            output: isProduction ? './_product' : './_develop'
-        }
-    };
+  };
 };

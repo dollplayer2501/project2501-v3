@@ -12,33 +12,33 @@ const childProcess = require('child_process');
 //// const packageJson = require('../../package.json');
 
 const getBuildInfo = function () {
-    //
-    var latestGitCommitHash = 'ZZZZZZZ';
-    try {
-        latestGitCommitHash = childProcess.execSync('git rev-parse --short HEAD')
-            .toString()
-            .trim();
-    } catch (err) {
-        // console.error(err);
-    }
+  //
+  var latestGitCommitHash = 'ZZZZZZZ';
+  try {
+    latestGitCommitHash = childProcess.execSync('git rev-parse --short HEAD')
+      .toString()
+      .trim();
+  } catch (err) {
+      // console.error(err);
+  }
 
-    const now = new Date();
-    const timeZone = 'UTC';
-    const buildTime = new Intl.DateTimeFormat('en-US', {
-            dateStyle: 'full',
-            timeStyle: 'short',
-            timeZone,
-        })
-        .format(now);
-    //
-    return {
-        time: {
-            raw: now.toISOString(),
-            formatted: `${buildTime} ${timeZone}`,
-        },
-        hash: latestGitCommitHash,
-        //// version: packageJson.version
-    };
+  const now = new Date();
+  const timeZone = 'UTC';
+  const buildTime = new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'full',
+    timeStyle: 'short',
+    timeZone,
+  })
+  .format(now);
+  //
+  return {
+    time: {
+      raw: now.toISOString(),
+      formatted: `${buildTime} ${timeZone}`,
+    },
+    hash: latestGitCommitHash,
+    //// version: packageJson.version
+  };
 }
 
 module.exports = getBuildInfo;

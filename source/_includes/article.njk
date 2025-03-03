@@ -111,7 +111,6 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
     <!-- Main -->
     <main class="container">
       <h2>Currently, I am interested in:</h2>
-
       <p class="strong">As of {{ site.interested_currently_mmmyyyy | escape }}</p>
 
 {% set items = collections.contentsSectionWorks %}
@@ -121,32 +120,32 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
       {{ item.templateContent | safe }}
   {% elif 'content' == item.data.tags %}
       <h4>{{ item.data.subtitle | safe }}</h4>
-        <div class="container">
-          <div class="row row-example">
-            <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.left }} col-xl-{{ item.data.col.left }}">
-              <div class="col-example">
+      <div class="container">
+        <div class="row row-example">
+          <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.left }} col-xl-{{ item.data.col.left }}">
+            <div class="col-example">
     {% for image in item.data.images %}
-                <img src="/images/{% set_image_extension image %}" />
+              <img src="/images/{% set_image_extension image %}" />
     {% endfor %}
-              </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.right }} col-xl-{{ item.data.col.right }}">
-              <div class="col-example">
-                <p class="strong">{{ item.data.read | safe }}</p>
-                <h5>Overview</h5>
-                {{ item.templateContent | safe }}
-                <h5>GitHub repository</h5>
-                <p><a href="{{ item.data.github }}">{{ item.data.github }}</a></p>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.right }} col-xl-{{ item.data.col.right }}">
+            <div class="col-example">
+              <p class="strong">{{ item.data.read | safe }}</p>
+              <h5>Overview</h5>
+              {{ item.templateContent | safe }}
+              <h5>GitHub repository</h5>
+              <p><a href="{{ item.data.github }}">{{ item.data.github }}</a></p>
     {% if item.data.siteurl is not null %}
-                <h5>Site url</h5>
-                <p><a href="{{ item.data.siteurl }}">{{ item.data.siteurl }}</a></p>
+              <h5>Site url</h5>
+              <p><a href="{{ item.data.siteurl }}">{{ item.data.siteurl }}</a></p>
     {% endif %}
-                <h5>Current status</h5>
-                <p>{{ item.data.status }}</p>
-              </div>
+              <h5>Current status</h5>
+              <p>{{ item.data.status }}</p>
             </div>
           </div>
         </div>
+      </div>
   {% endif %}
 {% endfor %}
 

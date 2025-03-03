@@ -1,39 +1,39 @@
 [
-    {
-        "name": "Twitter/X",
-        "url": "https://twitter.com/dollplayer2501",
-        "fontawesome": "fa-square-x-twitter"
-    }, {
-        "name": "Facebook",
-        "url": "https://www.facebook.com/dollplayer2501",
-        "fontawesome": "fa-square-facebook"
-    }, {
-        "name": "GitHub",
-        "url": "https://github.com/dollplayer2501",
-        "fontawesome": "fa-github-square"
-    }, {
-        "name": "DeviantArt, virtually inactive",
-        "url": "https://www.deviantart.com/dollplayer2501",
-        "fontawesome": "fa-deviantart"
-    }, {
-        "name": "Instagram, virtually inactive",
-        "url": "https://www.instagram.com/dollplayer2501/",
-        "fontawesome": "fa-instagram-square"
-    }, {
-        "name": "SlideShare, virtually inactive",
-        "url": "https://www.slideshare.net/dollplayer2501",
-        "fontawesome": "fa-slideshare"
-    }, {
-        "name": "LinkedIn, virtually inactive",
-        "url": "https://www.linkedin.com/in/dollplayer2501/",
-        "fontawesome": "fa-linkedin"
-    }, {
-        "name": "Steam",
-        "url": "https://steamcommunity.com/id/preg_match_all/",
-        "fontawesome": "fa-steam-square"
-    }, {
-        "name": "Amazon wish list",
-        "url": "https://www.amazon.co.jp/hz/wishlist/ls/1FBS5RH1UMGMW?ref_=wl_fv_le&viewType=grid",
-        "fontawesome": "fa-amazon"
-    }
+  {
+    "name": "Twitter/X",
+    "url": "https://twitter.com/dollplayer2501",
+    "fontawesome": "fa-square-x-twitter"
+  }, {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/dollplayer2501",
+    "fontawesome": "fa-square-facebook"
+  }, {
+    "name": "GitHub",
+    "url": "https://github.com/dollplayer2501",
+    "fontawesome": "fa-github-square"
+  }, {
+    "name": "DeviantArt, virtually inactive",
+    "url": "https://www.deviantart.com/dollplayer2501",
+    "fontawesome": "fa-deviantart"
+  }, {
+    "name": "Instagram, virtually inactive",
+    "url": "https://www.instagram.com/dollplayer2501/",
+    "fontawesome": "fa-instagram-square"
+  }, {
+    "name": "SlideShare, virtually inactive",
+    "url": "https://www.slideshare.net/dollplayer2501",
+    "fontawesome": "fa-slideshare"
+  }, {
+    "name": "LinkedIn, virtually inactive",
+    "url": "https://www.linkedin.com/in/dollplayer2501/",
+    "fontawesome": "fa-linkedin"
+  }, {
+    "name": "Steam",
+    "url": "https://steamcommunity.com/id/preg_match_all/",
+    "fontawesome": "fa-steam-square"
+  }, {
+    "name": "Amazon wish list",
+    "url": "https://www.amazon.co.jp/hz/wishlist/ls/1FBS5RH1UMGMW?ref_=wl_fv_le&viewType=grid",
+    "fontawesome": "fa-amazon"
+  }
 ]
