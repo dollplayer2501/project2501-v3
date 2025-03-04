@@ -51,19 +51,19 @@ module.exports = function (eleventyConfig) {
   //
   // 11ty - Passthrough Copy
   //
-  eleventyConfig.addPassthroughCopy({ './source/static/**/*': './' });
-  eleventyConfig.addPassthroughCopy({
-    'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf': './assets/webfonts/fa-brands-400.ttf',
-    'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2': './assets/webfonts/fa-brands-400.woff2',
-    'node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css': './assets/styles/fontawesome.min.css',
-    'node_modules/@fortawesome/fontawesome-free/css/brands.min.css': './assets/styles/brands.min.css',
-  });
-  eleventyConfig.addPassthroughCopy({
-    'node_modules/@picocss/pico/css/pico.min.css': './assets/styles/pico.min.css',
-  });
-  eleventyConfig.addPassthroughCopy({
-    'node_modules/bootstrap/dist/css/bootstrap-grid.min.css': './assets/styles/bootstrap-grid.min.css',
-  });
+  // eleventyConfig.addPassthroughCopy({ './source/static/**/*': './' });
+  // eleventyConfig.addPassthroughCopy({
+  //   'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf': './assets/webfonts/fa-brands-400.ttf',
+  //   'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2': './assets/webfonts/fa-brands-400.woff2',
+  //   'node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css': './assets/styles/fontawesome.min.css',
+  //   'node_modules/@fortawesome/fontawesome-free/css/brands.min.css': './assets/styles/brands.min.css',
+  // });
+  // eleventyConfig.addPassthroughCopy({
+  //   'node_modules/@picocss/pico/css/pico.min.css': './assets/styles/pico.min.css',
+  // });
+  // eleventyConfig.addPassthroughCopy({
+  //   'node_modules/bootstrap/dist/css/bootstrap-grid.min.css': './assets/styles/bootstrap-grid.min.css',
+  // });
 
 
   //
@@ -100,7 +100,7 @@ module.exports = function (eleventyConfig) {
     //
     // HTML minify
     //
-    eleventyConfig.addTransform("htmlmin", function(content) {
+    eleventyConfig.addTransform('htmlmin', function(content) {
       if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
         let minified = htmlmin.minify(content, {
           useShortDoctype: true,

@@ -10,6 +10,7 @@
     "develop:gulp:stylesheet:build": "cross-env NODE_ENV=develop npx gulp stylesheet",
     "develop:gulp:javascript:build": "cross-env NODE_ENV=develop npx gulp javascript",
     "develop:gulp:imageWebp:build": "cross-env NODE_ENV=develop npx gulp imageWebp",
+    "develop:gulp:fileCopy:build": "cross-env NODE_ENV=develop npx gulp fileCopy",
     "develop:gulp:build": "cross-env NODE_ENV=develop npx gulp build",
     "develop:gulp:watch": "cross-env NODE_ENV=develop npx gulp watch",
     "develop:eleventy:build": "cross-env NODE_ENV=develop npx @11ty/eleventy",
