@@ -10,7 +10,7 @@
 :root {
   --pico-font-family-sans-serif: 'Raleway', 'Noto Sans JP', sans-serif;
 }
- 
+
 @media (min-width: 576px) {
   :root {
     --pico-font-size: 90.00%;
@@ -34,6 +34,33 @@
 @media (min-width: 1536px) {
   :root {
     --pico-font-size: 100.00%;
+  }
+}
+
+
+/*
+ *
+ */
+button {
+  position: fixed;
+  display: flex;
+  right: 20px;
+  bottom: 20px;
+  visibility: hidden;
+  transition: .3s;
+}
+.is-active {
+  visibility: visible;
+}
+
+
+/*
+ *
+ */
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -100,20 +127,6 @@ header.container {
       padding-right: 0.5em
     }
   }
-
-  /* pend 2023-12-14 */
-  // nav,
-  // nav ul,
-  // nav ul li,
-  // nav ul li details,
-  // nav ul li summary,
-  // nav ul li details ul,
-  // nav ul li details ul li {
-  //   margin-top: 0;
-  //   margin-bottom: 0;
-  //   padding-top: 0;
-  //   padding-bottom: 0;
-  // }
 }
 
 
@@ -133,27 +146,6 @@ article {
     width: 100%;
   }
 }
-
-// @media (min-width: 576px) {
-//   body > article {
-//     max-width: 510px;
-//   }
-// }
-// @media (min-width: 768px) {
-//   body > article {
-//     max-width: 700px;
-//   }
-// }
-// @media (min-width: 992px) {
-//   body > article {
-//     max-width: 920px;
-//   }
-// }
-// @media (min-width: 1200px) {
-//   body > article {
-//     max-width: 1130px;
-//   }
-// }
 
 
 /*
@@ -188,6 +180,7 @@ main.container {
   img {
     margin-bottom: 1.0em;
     padding-bottom: 0;
+    margin-right: 1.0em;
   }
 
   dl, dl dt {
@@ -226,6 +219,49 @@ main.container {
 
 
 /*
+ * Breakpoint of Bootstrap, not Pico CSS
+ */
+@media (min-width: 576px) {
+  main.container {
+    img {
+      max-width: 40%;
+    }
+  }
+}
+@media (min-width: 768px) {
+  main.container {
+    img {
+      max-width: 40%;
+    }
+  }
+}
+@media (min-width: 992px) {
+  main.container {
+    img {
+      max-width: 45%;
+      float: right;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  main.container {
+    img {
+      max-width: 40%;
+      float: right;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  main.container {
+    img {
+      max-width: 40%;
+      float: right;
+    }
+  }
+}
+
+
+/*
  *
  */
 footer.container {
@@ -253,8 +289,6 @@ footer.container {
     list-style: none;
 
     li {
-      // list-style-type: none;
-      // list-style-position: inside;
       display: inline-block;
       margin: 0;
       padding: 0;
@@ -263,16 +297,5 @@ footer.container {
     li:not(:last-of-type) {
       padding-right: 0.5em
     }
-  }
-}
-
-
-/*
- *
- */
-a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
   }
 }

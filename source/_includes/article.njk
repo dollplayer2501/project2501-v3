@@ -176,7 +176,28 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
     </footer>
     <!-- ./ Footer -->
 
+    <button class="js-backToTop">TOP</button> <!-- go to top -->
+
     <!-- Minimal theme switcher -->
     <script src="/assets/scripts/minimal-theme-switcher.js"></script>
+    <!-- go to top -->
+    <script type="text/javascript">
+      const button = document.querySelector('.js-backToTop');
+      //
+      button.addEventListener('click', () => {
+        window.scroll({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+      //
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          button.classList.add('is-active');
+        } else {
+          button.classList.remove('is-active');
+        }
+      });
+      </script>
   </body>
 </html>
