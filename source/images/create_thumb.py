@@ -39,8 +39,6 @@ import textwrap
 import glob
 
 
-
-
 def subprocess_check_output(_exec_args:list):
   try:
     # raise ValueError()
@@ -76,8 +74,6 @@ def message_yellow(message:str) -> str:
   return '\033[33m' + message + '\033[0m'
 
 
-
-
 if __name__ == "__main__":
 
   #
@@ -91,10 +87,10 @@ if __name__ == "__main__":
 
   parser.add_argument('input_file',
     metavar = 'Input file',
-    help = message_yellow('Input image file, the file name MUST be xxx..large.png'))
-  parser.add_argument('output_path',
-    metavar = 'Output path',
-    help = message_yellow('Output path'))
+    help = message_yellow('Input image file name'))
+  parser.add_argument('output_file',
+    metavar = 'Output file',
+    help = message_yellow('Output image file name, png is preferable'))
 
   parser.add_argument('--top',
     required = True,
@@ -124,18 +120,7 @@ if __name__ == "__main__":
     metavar = 'Background color', default='#00000000', type=str,
     help = message_yellow('Background color, default is #00000000'))
 
-  parser.add_argument('-r', '--resize',
-    metavar = 'Resize', default='', type=str,
-    help = message_yellow('Arguments to give to -resize in the convert command'))
-
   args = parser.parse_args()
-
-  output_normal_file = os.path.join(args.output_path,
-    os.path.basename(args.input_file).replace('large.png', 'normal.png'))
-  output_resize_file = os.path.join(args.output_path,
-    os.path.basename(args.input_file).replace('large.png', 'resize.png'))
-
-  print('\033[32m' + args.input_file + ' - Start' + '\033[0m')
 
 
   #
@@ -296,13 +281,12 @@ if __name__ == "__main__":
   ret = _create_combine_between('north', size_str_top + '+0+0',
     'parts_top.mpc', 'base.mpc', 'base_1.mpc')
 
-  tmp_output_file = output_normal_file if 0 == len(args.resize) else 'finish.mpc'
 
   if 0 == args.middle_height:
 
-    # paste: bottom  ==> DONE?
+    # paste: bottom  ==> DONE
     ret = _create_combine_between('south', size_str_bottom + '+0+0',
-        'parts_bottom.mpc', 'base_1.mpc', tmp_output_file)
+        'parts_bottom.mpc', 'base_1.mpc', args.output_file)
 
   else:
 
@@ -313,21 +297,7 @@ if __name__ == "__main__":
 
     # paste: bottom  ==> DONE?
     ret = _create_combine_between('south', size_str_bottom + '+0+0',
-        'parts_bottom.mpc', 'base_2.mpc', tmp_output_file)
-
-
-  #
-  # Resize
-  #
-
-  if 0 < len(args.resize):
-    ret = subprocess_run([
-        'magick', tmp_output_file, '-resize', args.resize, output_resize_file
-      ])
-
-  ret = subprocess_run([
-      'magick', tmp_output_file, output_normal_file
-    ])
+        'parts_bottom.mpc', 'base_2.mpc', args.output_file)
 
 
   #
@@ -347,15 +317,9 @@ if __name__ == "__main__":
   #
 
   ret_normal = subprocess_pipe_run([
-      'magick', 'identify', '-format', '%wx%h', output_normal_file
+      'magick', 'identify', '-format', '%wx%h', args.output_file
     ])
-  print('\033[32m' + args.input_file + ' - End    - Normal: ' + ret_normal.stdout + '\033[0m')
-
-  if 0 < len(args.resize):
-    ret_resize = subprocess_pipe_run([
-        'magick', 'identify', '-format', '%wx%h', output_resize_file
-      ])
-    print('\033[32m' + args.input_file + ' - End    - Resize: ' + ret_resize.stdout + '\033[0m')
+  print('\033[32m' + args.input_file + ' - ' + ret_normal.stdout + '\033[0m')
 
 
   sys.exit()
