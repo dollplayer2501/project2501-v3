@@ -236,6 +236,11 @@ main.container {
   }
 }
 @media (min-width: 992px) {
+  header.container {
+    img {
+      float: right;
+    }
+  }
   main.container {
     img {
       max-width: 45%;
@@ -244,6 +249,11 @@ main.container {
   }
 }
 @media (min-width: 1200px) {
+  header.container {
+    img {
+      float: right;
+    }
+  }
   main.container {
     img {
       max-width: 40%;
@@ -252,6 +262,11 @@ main.container {
   }
 }
 @media (min-width: 1400px) {
+  header.container {
+    img {
+      float: right;
+    }
+  }
   main.container {
     img {
       max-width: 40%;
