@@ -1,12 +1,3 @@
-> [!CAUTION]
-> The following packages are currently out of date.  
->  
->  gulp             ^4.0.2  →  ^5.0.0  
->  
-> The currently known bug is that when Gulp is updated to the latest version, Gulp-webp is unable to properly convert to webp or copy png.  
-> Also, when compiling Sass/SCSS, a lot of warnings will appear.
-
-
 <img src="./source/images/screenshot..project2501-v3-dark..thumb.png" width="300">&nbsp;&nbsp;<img src="./source/images/screenshot..project2501-v3-light..thumb.png" width="300">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/abe8230e-48f9-4ce9-8513-4e0541f64d21/deploy-status)](https://app.netlify.com/sites/project2501/deploys)
@@ -29,7 +20,7 @@ The URLs below point to the same site.
     - [html-minifier](https://www.npmjs.com/package/html-minifier)
     - [Nunjucks](https://www.11ty.dev/docs/languages/nunjucks/) included in 11ty/Eleventy
     - Use [markdown-it](https://www.npmjs.com/package/markdown-it) and [markdown-it-deflist](https://www.npmjs.com/package/@gerhobbelt/markdown-it-deflist) instead of [build in Markdown](https://www.11ty.dev/docs/languages/markdown/)
-  - Gulp
+  - Gulp v5
     - [gulp-dart-sass](https://www.npmjs.com/package/gulp-dart-sass) with [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)  
       My skills don't allow me to deal with warnings when compiling Sass/SCSS.  
       Because of this, I used to compile from the Sass/SCSS package, but now I don't do this and just copy the CSS.

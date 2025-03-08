@@ -5,12 +5,13 @@ import terser from 'gulp-terser';
 import sourcemaps from 'gulp-sourcemaps';
 import gulpif from 'gulp-if';
 
-import { mode, outputPath, path } from './_config.mjs'
+import { mode, outputPath, path } from './_config.mjs';
 
 
 export const javaScript_task = function(done) {
-  // return gulp.src(path.javascript)
-  gulp.src(path.javascript)
+  gulp.src(path.javascript,{
+      encoding: false,
+    })
     .pipe(mode.develop(sourcemaps.init()))
     .pipe(gulpif(mode.product() ? true: false,
       terser({

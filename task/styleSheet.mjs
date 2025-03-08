@@ -4,12 +4,13 @@ import gulp from 'gulp';
 import sass from 'gulp-dart-sass';
 import sourcemaps from 'gulp-sourcemaps';
 
-import { mode, outputPath, path } from './_config.mjs'
+import { mode, outputPath, path } from './_config.mjs';
 
 
 export const styleSheet_task = function(done) {
-  // return gulp.src(path.scss.source)
-  gulp.src(path.scss.source)
+  gulp.src(path.scss.source, {
+      encoding: false,
+    })
     .pipe(mode.develop(sourcemaps.init()))
     .pipe(sass({
       includePaths: [

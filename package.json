@@ -36,7 +36,7 @@
     "@picocss/pico": "^2.0.6",
     "bootstrap": "^5.3.3",
     "cross-env": "^7.0.3",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-dart-sass": "^1.1.0",
     "gulp-if": "^3.0.0",
     "gulp-mode": "^1.1.0",
