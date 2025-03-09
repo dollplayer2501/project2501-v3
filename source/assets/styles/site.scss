@@ -215,6 +215,9 @@ main.container {
   p.strong {
     font-weight: bold;
   }
+  p.small {
+    font-size: 0.8em;
+  }
 }
 
 
@@ -244,20 +247,20 @@ main.container {
   main.container {
     img {
       max-width: 45%;
-      float: right;
+      float: center;
     }
   }
 }
 @media (min-width: 1200px) {
   header.container {
     img {
-      float: right;
+      float: center;
     }
   }
   main.container {
     img {
       max-width: 40%;
-      float: right;
+      float: center;
     }
   }
 }
@@ -270,7 +273,7 @@ main.container {
   main.container {
     img {
       max-width: 40%;
-      float: right;
+      float: center;
     }
   }
 }
@@ -299,7 +302,7 @@ footer.container {
     padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    margin-left: 1.0em;
+    margin-left: 0.5em;
     padding-left: 0;
     list-style: none;
 
@@ -310,7 +313,7 @@ footer.container {
     }
 
     li:not(:last-of-type) {
-      padding-right: 0.5em
+      padding-right: 0.3em
     }
   }
 }

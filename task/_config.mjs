@@ -54,6 +54,31 @@ export const path = {
     },
     //
     {
+      'source': 'node_modules/lightbox2/dist/css/lightbox.min.css',
+      'destination': '/assets/styles',
+    },
+    {
+      'source': 'node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js',
+      'destination': '/assets/script',
+    },
+    {
+      'source': 'node_modules/lightbox2/dist/images/close.png',
+      'destination': '/assets/images',
+    },
+    {
+      'source': 'node_modules/lightbox2/dist/images/loading.gif',
+      'destination': '/assets/images',
+    },
+    {
+      'source': 'node_modules/lightbox2/dist/images/next.png',
+      'destination': '/assets/images',
+    },
+    {
+      'source': 'node_modules/lightbox2/dist/images/prev.png',
+      'destination': '/assets/images',
+    },
+    //
+    {
       'source': 'node_modules/@picocss/pico/css/pico.min.css',
       'destination': '/assets/styles',
     },
@@ -64,3 +89,4 @@ export const path = {
     },
   ],
 };
+
