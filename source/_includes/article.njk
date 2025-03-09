@@ -3,51 +3,42 @@ TODO: ZennのSVGを経由して？アイコンの表示？
 TODO: 各記事単位でdisplay=true/falseみたいにする？（この場合、親の扱いとか？どうする？）
 TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2025年3月初旬）移行、記事の大幅見直しをする予定だけど、今まで書いた記事は消したくないので
  -->
+{% set site_title = site.name + ' - ' + site.author.name + ' - ' + title  %}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ site.name | escape }} - {{ site.author.name | escape }} - {{ site.description1 | escape }}</title>
-    <meta
-      name="description"
-      content="{{ site.name | escape }} - {{ site.author.name | escape }}"
-    />
-    <link rel="shortcut icon" href="/favicon.ico" />
+  <head prefix="og: https://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site_title | escape }}</title>
+    <meta name="description" content="{{ site.name | escape }} - {{ site.author.name | escape }}">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- OGP -->
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="{{ site.ogp.type }}">
+    <meta property="og:title" content="{{ site_title | escape }}">
+    <meta property="og:description" content="{{ site.description | escape }}">
+    <meta property="og:site_name" content="{{ site.name | escape }}">
+    <meta property="og:image" content="{{ site.url }}/images/{% set_image_extension site.ogp.image %}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="{{ site.twitter_card.type }}">
+    <meta name="twitter:site" content="{{ site.twitter_card.site }}">
+    <meta name="twitter:title" content="{{ site_title | escape }}">
+    <meta name="twitter:description" content="{{ site.description | escape }}">
+    <meta name="twitter:image" content="{{ site.url }}/images/{% set_image_extension site.twitter_card.image %}">
 
     <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="/assets/styles/fontawesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/assets/styles/brands.min.css"
-    />
-
+    <link rel="stylesheet" href="/assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/brands.min.css">
     <!-- bootstrap-grid -->
-    <link
-      rel="stylesheet"
-      href="/assets/styles/bootstrap-grid.min.css"
-    />
-
+    <link rel="stylesheet" href="/assets/styles/bootstrap-grid.min.css">
     <!-- Lightbox2 -->
-    <link
-      rel="stylesheet"
-      href="/assets/styles/lightbox.min.css"
-    />
-
+    <link rel="stylesheet" href="/assets/styles/lightbox.min.css">
     <!-- Pico.css -->
-    <link
-      rel="stylesheet"
-      href="/assets/styles/pico.min.css"
-    />
-
+    <link rel="stylesheet" href="/assets/styles/pico.min.css">
     <!-- my css -->
-    <link
-      rel="stylesheet"
-      href="/assets/styles/site.css"
-    />
+    <link rel="stylesheet" href="/assets/styles/site.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalytics4 }}"></script>
@@ -78,7 +69,7 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
           <div class="row row-example">
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2">
               <div class="col-example">
-                <img src="/images/{% set_image_extension site.author.avator %}" />
+                <img src="/images/{% set_image_extension site.author.avator %}">
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
@@ -119,7 +110,7 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
 
 
     <article class="container">
-      <img src="/images/{% set_image_extension "IMG_4604_twitter_gray.jpg" %}" />
+      <img src="/images/{% set_image_extension site.cover_image.first %}">
     </article>
 
 
@@ -141,7 +132,7 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
             <div class="col-image">
     {% for image in item.data.images %}
               <a href="/images/{% set_image_lightbox2_large image %}" data-lightbox="{{ item.data.lightbox2 }}" data-title="">
-                <img src="/images/{% set_image_extension image %}" />
+                <img src="/images/{% set_image_extension image %}">
               </a>
     {% endfor %}
             </div>
@@ -173,7 +164,7 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
 
 
     <article class="container">
-      <img src="/images/{% set_image_extension "IMG_4604_twitter_colored.png" %}" />
+      <img src="/images/{% set_image_extension site.cover_image.second %}">
     </article>
 
 
