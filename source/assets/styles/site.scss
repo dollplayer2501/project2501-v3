@@ -238,6 +238,10 @@ main.container {
     }
   }
 }
+/*
+ * MEMO: This becomes the threshold value, and the layout changes from
+ *       2 rows x 1 column to 1 row x 2 columns.
+ */
 @media (min-width: 992px) {
   header.container {
     img {

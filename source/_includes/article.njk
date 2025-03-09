@@ -48,6 +48,15 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
       rel="stylesheet"
       href="/assets/styles/site.css"
     />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalytics4 }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.googleAnalytics4 }}');
+    </script>
   </head>
 
   <body>
@@ -129,7 +138,7 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
       <div class="container">
         <div class="row row-example">
           <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.left }} col-xl-{{ item.data.col.left }}">
-            <div class="col-example">
+            <div class="col-image">
     {% for image in item.data.images %}
               <a href="/images/{% set_image_lightbox2_large image %}" data-lightbox="{{ item.data.lightbox2 }}" data-title="">
                 <img src="/images/{% set_image_extension image %}" />
@@ -138,7 +147,7 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
             </div>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-{{ item.data.col.right }} col-xl-{{ item.data.col.right }}">
-            <div class="col-example">
+            <div class="col-text">
     {% if item.data.read is not null %}
               <p class="strong">{{ item.data.read | safe }}</p>
     {% endif %}
@@ -186,18 +195,19 @@ TODO: 非公開対象パスを設ける？（.gitignore管理？）この後（2
     </footer>
     <!-- ./ Footer -->
 
-    <button class="js-backToTop">TOP</button> <!-- go to top -->
+    <!-- go to top -->
+    <button class="js-backToTop">TOP</button>
 
     <!-- Minimal theme switcher -->
     <script src="/assets/scripts/minimal-theme-switcher.js"></script>
     <!-- Lightbox2 -->
     <script src="/assets/script/lightbox-plus-jquery.min.js"></script>
-    <script type="text/javascript">
-        lightbox.option({
-        })
+    <script>
+      lightbox.option({
+      })
     </script>
     <!-- go to top -->
-    <script type="text/javascript">
+    <script>
       const button = document.querySelector('.js-backToTop');
       //
       button.addEventListener('click', () => {
