@@ -226,14 +226,20 @@ main.container {
  */
 @media (min-width: 576px) {
   main.container {
-    img {
+    img.image_one {
+      max-width: 80%;
+    }
+    img.image_many {
       max-width: 40%;
     }
   }
 }
 @media (min-width: 768px) {
   main.container {
-    img {
+    img.image_one {
+      max-width: 80%;
+    }
+    img.image_many {
       max-width: 40%;
     }
   }
@@ -249,22 +255,26 @@ main.container {
     }
   }
   main.container {
-    img {
-      max-width: 45%;
-      float: center;
+    img.image_one {
+      max-width: 80%;
+    }
+    img.image_many {
+      max-width: 40%;
     }
   }
 }
 @media (min-width: 1200px) {
   header.container {
     img {
-      float: center;
+      float: right;
     }
   }
   main.container {
-    img {
+    img.image_one {
+      max-width: 80%;
+    }
+    img.image_many {
       max-width: 40%;
-      float: center;
     }
   }
 }
@@ -275,9 +285,11 @@ main.container {
     }
   }
   main.container {
-    img {
+    img.image_one {
+      max-width: 80%;
+    }
+    img.image_many {
       max-width: 40%;
-      float: center;
     }
   }
 }
