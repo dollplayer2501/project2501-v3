@@ -1,6 +1,7 @@
 {
   "language": "ja",
   "name": "project2501",
+  "url": "https://project2501.duelist.org",
   "description": "Like the portfolio web site of Masahiquo, 'Nara-ya/奈良屋' MORRY, a.k.a @dollplayer2501.",
   "author": {
     "name": "Masahiquo, 'Nara-ya/奈良屋' MORRY",
@@ -13,6 +14,15 @@
       "Avator: <small><a href=\"https://picrew.me/ja/image_maker/80783\">拝式目付きの悪い男メーカー｜Picrew</a></small>"
     ]
   },
+  "ogp": {
+    "type": "website",
+    "image": "IMG_4604_twitter..modulate-100-30-100.png"
+  },
+  "twitter_card" : {
+    "type": "summary",
+    "site": "@dollplayer2501",
+    "image": "IMG_4604_twitter..modulate-100-30-100.png"
+  },
   "interested_currently_mmmyyyy": "November 2023",
   "more":{
     "url": "https://dollplayer2501.netlify.app",
@@ -23,5 +33,9 @@
     "name": "project2501-v3",
     "url": "https://github.com/dollplayer2501/project2501-v3"
   },
-  "googleAnalytics4": "G-6Y0ZZWFXHM"
+  "googleAnalytics4": "G-6Y0ZZWFXHM",
+  "cover_image": {
+    "first": "IMG_4604_twitter_gray.jpg",
+    "second": "IMG_4604_twitter_colored.png"
+  }
 }
