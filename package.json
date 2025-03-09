@@ -44,6 +44,7 @@
     "gulp-terser": "^2.1.0",
     "gulp-webp": "^5.0.0",
     "html-minifier": "^4.0.0",
+    "lightbox2": "^2.11.5",
     "markdown-it": "^14.1.0",
     "markdown-it-deflist": "^3.0.0",
     "npm-check-updates": "^17.1.15",

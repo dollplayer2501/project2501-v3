@@ -45,25 +45,7 @@ module.exports = function (eleventyConfig) {
   // 11ty - Shortcodes
   //
   eleventyConfig.addShortcode('set_image_extension', shortcodes.set_image_extension);
-  //
-  eleventyConfig.addPairedShortcode('set_picocss_tooltips', shortcodes.set_picocss_tooltips);
-
-  //
-  // 11ty - Passthrough Copy
-  //
-  // eleventyConfig.addPassthroughCopy({ './source/static/**/*': './' });
-  // eleventyConfig.addPassthroughCopy({
-  //   'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf': './assets/webfonts/fa-brands-400.ttf',
-  //   'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2': './assets/webfonts/fa-brands-400.woff2',
-  //   'node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css': './assets/styles/fontawesome.min.css',
-  //   'node_modules/@fortawesome/fontawesome-free/css/brands.min.css': './assets/styles/brands.min.css',
-  // });
-  // eleventyConfig.addPassthroughCopy({
-  //   'node_modules/@picocss/pico/css/pico.min.css': './assets/styles/pico.min.css',
-  // });
-  // eleventyConfig.addPassthroughCopy({
-  //   'node_modules/bootstrap/dist/css/bootstrap-grid.min.css': './assets/styles/bootstrap-grid.min.css',
-  // });
+  eleventyConfig.addShortcode('set_image_lightbox2_large', shortcodes.set_image_lightbox2_large);
 
 
   //
