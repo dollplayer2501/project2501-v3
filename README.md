@@ -56,9 +56,10 @@ The URLs below point to the same site.
 > It seems that hoge processes the file normally even with the file name `.tool-versions`.  
 > For this reason, I have not changed the file name.
 
-    rtx activate fish | source
+Refer to [`./.tool-versions`](https://github.com/dollplayer2501/project2501-v3/blob/main/.tool-versions) for the current version used.  
+The following command should be executed if the node version specified in `./.tool-versions` differs from that of your local environment.
 
-Refer to [`./.tool-versions`](https://github.com/dollplayer2501/project2501-v3/blob/main/.tool-versions) for the current version used.
+    mise install
 
 ### 3. Npm and package install
 

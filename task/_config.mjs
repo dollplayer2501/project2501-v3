@@ -36,12 +36,7 @@ export const path = {
     },
     //
     {
-      'source': 'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf',
-      'destination': '/assets/webfonts',
-    },
-    //
-    {
-      'source': 'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2',
+      'source': 'node_modules/@fortawesome/fontawesome-free/webfonts/*.woff2',
       'destination': '/assets/webfonts',
     },
     {
