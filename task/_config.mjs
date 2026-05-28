@@ -54,7 +54,7 @@ export const path = {
     },
     {
       'source': 'node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js',
-      'destination': '/assets/script',
+      'destination': '/assets/scripts',
     },
     {
       'source': 'node_modules/lightbox2/dist/images/close.png',
